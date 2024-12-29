@@ -34,3 +34,16 @@ def test_increment():
 # This test is designed to fail for demonstration purposes.
 def test_decrement():
     assert inc_dec(5, "dec") == 4
+
+
+class TestForSelf:
+    value = ''
+    def test_setup_method(self):
+        self.value = "URL"
+        
+    def test_value(self):
+        if self.value == "URL":
+            print("True")
+        else:
+            print("False")
+            
